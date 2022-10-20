@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
 import './App.css';
+import './styles/toDoList.css';
+import './styles/toDo.css';
+
+import NewSection from './components/NewSection';
+
 
 function App() {
+  const [name, setName] = useState<string>('');
+  let [sectionList, setSectionList] = useState<any[]>([]);
+
+  const handleInputUSer = (event: any) => {
+    setName(event.target.value);
+}
+
+const handleOnClickAddUser = () => {
+  if (name !== "") {
+    sectionList.push( <NewSection name={name}/>)
+    setName('');
+  }
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Podział obowiązków domowników</h1>
+      <div className='userArea'>
+        <input
+                  className='addUser'
+                  placeholder='Wpisz nowego użytkownika'
+                  value={name} 
+                  onChange={handleInputUSer}
+              />
+              <button
+                  className='addUser'
+                  onClick={handleOnClickAddUser}
+                  >Dodaj użytkownika
+              </button>
+      </div>
+        <div className='main'>
+            {sectionList}
+        </div>
     </div>
   );
 }
