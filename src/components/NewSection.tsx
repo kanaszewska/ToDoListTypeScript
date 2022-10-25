@@ -5,7 +5,7 @@ import '../styles/newSection.css';
 
 interface SectionType {
   name: string,
-}
+};
 
 const NewSection = ({name}: SectionType) => {
     

@@ -15,7 +15,7 @@ function ToDoList<T>(props: T) {
             ...toDoList,
             inputValue: event.target.value,
         });
-    }
+    };
 
     const handleOnClick = () => {
     if (inputValue === "") return;
@@ -38,14 +38,14 @@ function ToDoList<T>(props: T) {
     return ( 
         <div className='container'>
             <input
-                placeholder='Wpisz nowe zadanie'
+                placeholder='Enter a new task'
                 value={inputValue} 
                 onChange={handleInputChange}
             />
             <button
                 className='add'
                 onClick={handleOnClick}>
-                    Dodaj
+                    Add
             </button>
                 {todos.map((todo) => (
             <ToDo

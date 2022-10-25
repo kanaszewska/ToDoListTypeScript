@@ -12,30 +12,31 @@ function App() {
   let [sectionList, setSectionList] = useState<any[]>([]);
 
   const handleInputUSer = (event: any) => {
-    setName(event.target.value);
-}
+      setName(event.target.value);
+  };
 
-const handleOnClickAddUser = () => {
-  if (name !== "") {
-    sectionList.push( <NewSection name={name}/>)
-    setName('');
-  }
-}
+  const handleOnClickAddUser = () => {
+    if (name !== "") {
+      sectionList.push( <NewSection name={name}/>);
+      setName('');
+    };
+  };
+
   return (
     <div className='app'>
-      <h1>Podział obowiązków domowników</h1>
+      <h1>Segregation of Duties</h1>
       <div className='userArea'>
         <input
-                  className='addUser'
-                  placeholder='Wpisz nowego użytkownika'
-                  value={name} 
-                  onChange={handleInputUSer}
-              />
-              <button
-                  className='addUser'
-                  onClick={handleOnClickAddUser}
-                  >Dodaj użytkownika
-              </button>
+          className='addUser'
+          placeholder='Enter a new user'
+          value={name} 
+          onChange={handleInputUSer}
+        />
+          <button
+            className='addUser'
+            onClick={handleOnClickAddUser}
+            >Add a user
+            </button>
       </div>
         <div className='main'>
             {sectionList}
