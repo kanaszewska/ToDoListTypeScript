@@ -7,11 +7,12 @@ import './styles/toDo.css';
 import NewSection from './components/NewSection';
 
 
+
 function App() {
   const [name, setName] = useState<string>('');
   let [sectionList, setSectionList] = useState<any[]>([]);
 
-  const handleInputUSer = (event: any) => {
+  const handleInputUSer = (event: any): void => {
       setName(event.target.value);
   };
 

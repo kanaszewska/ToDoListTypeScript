@@ -10,7 +10,7 @@ function ToDoList<T>(props: T) {
     const [toDoList, setToDoList] = useState<ListType>({todos: [], inputValue: ""});
 
 
-    const handleInputChange = (event: any) => {
+    const handleInputChange = (event: any): void => {
         setToDoList({
             ...toDoList,
             inputValue: event.target.value,
