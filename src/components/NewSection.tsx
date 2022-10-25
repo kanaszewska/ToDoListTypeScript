@@ -3,7 +3,7 @@ import ToDoList from './ToDoList';
 
 import '../styles/newSection.css';
 
-interface SectionType {
+export interface SectionType {
   name: string,
 };
 

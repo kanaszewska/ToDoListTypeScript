@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import ToDo from './ToDo';
 
-interface ListType {
+export interface ListType {
     todos: string[],
     inputValue: string,
   };
 
-function ToDoList<T>(props: T) {
-    const [toDoList, setToDoList] = useState<ListType>({todos: [], inputValue: ""});
+function ToDoList () {
+    const [toDoList, setToDoList] = useState<ListType>({
+        todos: [], 
+        inputValue: ""
+    });
 
 
     const handleInputChange = (event: any): void => {
