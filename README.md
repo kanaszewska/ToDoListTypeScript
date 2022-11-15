@@ -3,11 +3,11 @@ https://kanaszewska.github.io/ToDoListTypeScript/
 
 
 # Technologies Used
-HTML5
-
-CSS3
-
-JavaScript
+* CSS
+* HTML5
+* JavaScript
+* React
+* TypeScript
 
 
 
