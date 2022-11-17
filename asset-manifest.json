@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ToDoListTypeScript/static/css/main.f58ac9ab.css",
+    "main.css": "/ToDoListTypeScript/static/css/main.8864eee4.css",
     "main.js": "/ToDoListTypeScript/static/js/main.0bad95a1.js",
     "static/media/img1.jpg": "/ToDoListTypeScript/static/media/img1.5f45fb207dd561758c1e.jpg",
     "index.html": "/ToDoListTypeScript/index.html",
-    "main.f58ac9ab.css.map": "/ToDoListTypeScript/static/css/main.f58ac9ab.css.map",
+    "main.8864eee4.css.map": "/ToDoListTypeScript/static/css/main.8864eee4.css.map",
     "main.0bad95a1.js.map": "/ToDoListTypeScript/static/js/main.0bad95a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.f58ac9ab.css",
+    "static/css/main.8864eee4.css",
     "static/js/main.0bad95a1.js"
   ]
 }
