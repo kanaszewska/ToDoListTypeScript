@@ -1,49 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import './App.css';
-import './styles/toDoList.css';
-import './styles/toDo.css';
+import './App.css'
+import './styles/toDoList.css'
+import './styles/toDo.css'
 
-import NewSection from './components/NewSection';
-
-
+import NewSection from './components/NewSection'
 
 function App() {
-  const [name, setName] = useState<string>('');
-  let [sectionList, setSectionList] = useState<any[]>([]);
+  const [name, setName] = useState<string>('')
+  let [sectionList, setSectionList] = useState<any[]>([])
 
-  const handleInputUSer = (event: any): void => {
-      setName(event.target.value);
-  };
+  const handleInputUSer = (event: React.ChangeEvent<HTMLInputElement>,
+  ): void => {
+    setName(event.target.value)
+  }
 
   const handleOnClickAddUser = () => {
-    if (name !== "") {
-      sectionList.push( <NewSection name={name}/>);
-      setName('');
-    };
-  };
+    if (name !== '') {
+      sectionList.push(<NewSection name={name} />)
+      setName('')
+    }
+  }
 
   return (
-    <div className='app'>
+    <div className="app">
       <h1>Segregation of Duties</h1>
-      <div className='userArea'>
+      <div className="userArea">
         <input
-          className='addUser'
-          placeholder='Enter a new user'
-          value={name} 
+          className="addUser"
+          placeholder="Enter a new user"
+          value={name}
           onChange={handleInputUSer}
         />
-          <button
-            className='addUser'
-            onClick={handleOnClickAddUser}
-            >Add a user
-            </button>
+        <button className="addUser" onClick={handleOnClickAddUser}>
+          Add a user
+        </button>
       </div>
-        <div className='main'>
-            {sectionList}
-        </div>
+      <div className="main">{sectionList}</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
