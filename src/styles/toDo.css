@@ -21,10 +21,6 @@
     font-weight: bolder;
 }
 
-/* .check--done {
-    color: red;
-} */
-
 .check input[type="checkbox"] {
     width: 1.2rem;
     padding: .6rem;
@@ -34,7 +30,6 @@
 .check input[type="checkbox"]:checked {
     background-color: black;
 }
-
 
 button.remove {
     margin: .9rem .3rem;
