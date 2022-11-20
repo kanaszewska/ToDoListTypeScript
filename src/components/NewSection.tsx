@@ -3,11 +3,10 @@ import ToDoList from './ToDoList'
 
 import '../styles/newSection.css'
 
-export interface SectionType {
-  name: string
-}
 
-const NewSection = ({ name }: SectionType) => {
+const NewSection = (props:{ name: string }) => {
+
+  const { name } = props;
   return (
     <div className="newSection">
       <section className="user">

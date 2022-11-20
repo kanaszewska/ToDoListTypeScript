@@ -6,18 +6,20 @@ import './styles/toDo.css'
 
 import NewSection from './components/NewSection'
 
+
 function App() {
   const [name, setName] = useState<string>('')
-  let [sectionList, setSectionList] = useState<any[]>([])
+  const [sectionList, setSectionList] = useState<any[]>([])
 
-  const handleInputUSer = (event: React.ChangeEvent<HTMLInputElement>,
+  const handleInputUSer = (
+    event: React.ChangeEvent<HTMLInputElement>
   ): void => {
     setName(event.target.value)
   }
 
   const handleOnClickAddUser = () => {
     if (name !== '') {
-      sectionList.push(<NewSection name={name} />)
+  setSectionList([...sectionList, (<NewSection name={name} />)])
       setName('')
     }
   }
