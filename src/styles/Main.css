@@ -1,12 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 .app {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  background: url("../styles/images/bcg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .userArea {
@@ -39,8 +43,7 @@ button.addUser:hover {
 }
 
 h1 {
-  margin: 1.5rem;
-  padding: 5px;
+  padding: 1rem;
   color: white;
   text-align: center;
   text-transform: uppercase;

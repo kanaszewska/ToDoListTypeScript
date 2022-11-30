@@ -1,43 +1,44 @@
-import React, { useState } from 'react'
-import ToDo from './ToDo'
+import React, { useState } from "react";
+import ToDo from "./ToDo";
 
 export interface ListType {
-  todos: string[]
-  inputValue: string
+  todos: string[];
+  inputValue: string;
 }
 
 function ToDoList() {
   const [toDoList, setToDoList] = useState<ListType>({
     todos: [],
-    inputValue: '',
-  })
+    inputValue: "",
+  });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>,
-    ): void => {
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setToDoList({
       ...toDoList,
       inputValue: event.target.value,
-    })
-  }
+    });
+  };
 
   const handleOnClick = () => {
-    if (inputValue === '') return
-    const { todos } = toDoList
+    if (inputValue === "") return;
+    const { todos } = toDoList;
     setToDoList({
       todos: [...todos, inputValue],
-      inputValue: '',
-    })
-  }
+      inputValue: "",
+    });
+  };
 
   const handleOnClickRemove = (todoValue: string) => {
-    const { todos } = toDoList
+    const { todos } = toDoList;
     setToDoList({
       ...toDoList,
       todos: todos.filter((todo) => todo !== todoValue),
-    })
-  }
+    });
+  };
 
-  const { todos, inputValue } = toDoList
+  const { todos, inputValue } = toDoList;
   return (
     <div className="container">
       <input
@@ -52,7 +53,7 @@ function ToDoList() {
         <ToDo key={todo} todo={todo} onCloseClick={handleOnClickRemove} />
       ))}
     </div>
-  )
+  );
 }
 
-export default ToDoList
+export default ToDoList;

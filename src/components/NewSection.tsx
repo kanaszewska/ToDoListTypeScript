@@ -1,11 +1,9 @@
-import React from 'react'
-import ToDoList from './ToDoList'
+import React from "react";
+import ToDoList from "./ToDoList";
 
-import '../styles/newSection.css'
+import "../styles/NewSection.css";
 
-
-const NewSection = (props:{ name: string }) => {
-
+const NewSection = (props: { name: string }) => {
   const { name } = props;
   return (
     <div className="newSection">
@@ -14,7 +12,7 @@ const NewSection = (props:{ name: string }) => {
         <ToDoList />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default NewSection
+export default NewSection;
