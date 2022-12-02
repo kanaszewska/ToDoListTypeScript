@@ -11,8 +11,8 @@ https://kanaszewska.github.io/ToDoListTypeScript/
 
 # Features
 * Responsive design
-* You can add multiple users
-* You can add separate tasks for each user
+* Create multiple users
+* Add separate tasks for each user
 * The task can be checked off after completion
 * You can also delete a task
 
